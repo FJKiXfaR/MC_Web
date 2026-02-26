@@ -40,11 +40,11 @@ export const websiteConfig = {
         enabled: true,
         pageTitle: {
           mainTitle: {
-            texts: ["游戏相册", "Game Gallery"],
+            texts: ["游戏相册", "DCS Game Gallery"],
             typewriter: {
               enabled: true,
               speed: 100,
-              delay: 2000,
+              delay: 1000,
               loop: true
             }
           },
@@ -58,7 +58,7 @@ export const websiteConfig = {
         enabled: true,
         pageTitle: {
           mainTitle: {
-            texts: ["晚晚服服历程", "DC Server History"],
+            texts: ["晚晚服服历程", "DCS History"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -76,11 +76,11 @@ export const websiteConfig = {
         enabled: true,
         pageTitle: {
           mainTitle: {
-            texts: ["玩家排行榜", "Player Leaderboard"],
+            texts: ["玩家排行榜", "DCS Leaderboard"],
             typewriter: {
               enabled: true,
               speed: 100,
-              delay: 2000,
+              delay: 1000,
               loop: true
             }
           },
@@ -94,11 +94,11 @@ export const websiteConfig = {
         enabled: true,
         pageTitle: {
           mainTitle: {
-            texts: ["关于服务器", "About Server"],
+            texts: ["关于服务器", "About DCServer"],
             typewriter: {
               enabled: true,
               speed: 100,
-              delay: 2000,
+              delay: 1000,
               loop: true
             }
           },
@@ -211,7 +211,7 @@ export const websiteConfig = {
     objectives: {
       // 活跃时间
       "fzsd.module.scoreboard.display.activation": {
-        enabled: true,
+        enabled: true,             //是否显示
         displayName: "活跃时间",
         icon: "clock",
         unit: "小时",
@@ -395,7 +395,7 @@ export const websiteConfig = {
           icon: "email",
           buttonText: "发送邮件",
           buttonType: "secondary",
-          url: "mailto:wananfory@outlook.com"
+          url: "mailto:me@wanfory.top"
         }
       ]
     },
@@ -415,7 +415,7 @@ export const websiteConfig = {
         cacheTimeout: 300000 // 5分钟缓存
       },
       
-      // 手动成员列表（当dataSource为"manual"时生效）
+      // 手动成员列表（当dataSource为"manual"时,或未获取到数据时生效）
       manualList: [
         "EpiphanyEX",
         "Bu_XiAo_Le",
@@ -457,7 +457,6 @@ export const websiteConfig = {
       shield: "mdi-shield",
       home: "mdi-home",
       chat: "mdi-chat",
-      discord: "mdi-discord",
       qqchat: "mdi-qqchat",
       email: "mdi-email"
     }
