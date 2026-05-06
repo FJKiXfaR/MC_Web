@@ -391,7 +391,7 @@ export const websiteConfig = {
         {
           title: "discord group",
           subtitle: "加入官方 discord 交流",
-          icon: "qqchat",
+          icon: "discord",
           buttonText: "加入 discord ",
           buttonType: "secondary",
           url: "https://discord.gg/2qYkbFsade"
@@ -465,6 +465,7 @@ export const websiteConfig = {
       home: "mdi-home",
       chat: "mdi-chat",
       qqchat: "mdi-qqchat",
+      discord: "mdi-sharp-discord",
       email: "mdi-email"
     }
   },
