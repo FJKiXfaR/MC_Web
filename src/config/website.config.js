@@ -46,7 +46,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["游戏相册", "DCS Game Gallery"],
+            texts: ["游戏相册", "Server Game Gallery"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -67,7 +67,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["晚晚服服历程", "DCS History"],
+            texts: ["此服历程", "Server History"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -88,7 +88,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["玩家排行榜", "DCS Leaderboard"],
+            texts: ["玩家排行榜", "server Leaderboard"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -109,7 +109,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["关于服务器", "About DCServer"],
+            texts: ["关于服务器", "About Server"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -197,17 +197,17 @@ export const websiteConfig = {
   // 服务器配置
   server: {
     // 页面显示的服务器地址
-    displayAddress: "w-6.cc",
+    displayAddress: "mc.noon.pw",
     // API请求使用的服务器地址（可以不同）
-    apiAddress: "ipv4.w-6.cc",
-    port: "25565",
+    apiAddress: "mc.noon.pw",
+    port: "无需填写此项",
     version: "1.21.4",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
   },
 
   // 页脚配置
   footer: {
-    copyright: "©  ",
+    copyright: "©  Anonymous",
     customHtml: `
       <!-- 在这里插入自定义HTML代码，比如备案信息 -->
       <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div>
