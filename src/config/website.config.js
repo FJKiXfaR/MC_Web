@@ -402,7 +402,7 @@ export const websiteConfig = {
           icon: "email",
           buttonText: "发送邮件",
           buttonType: "secondary",
-          url: "email@noon.pw"
+          url: "mailto:email@noon.pw"
         }
       ]
     },
