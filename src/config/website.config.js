@@ -2,10 +2,10 @@
 export const websiteConfig = {
   // 网站基本信息
   site: {
-    title: "晚晚服",
-    description: "欢迎来到晚晚服，探索无限可能的方块世界！",
-    keywords: "Minecraft,服务器,我的世界,Java版,生存,创造,生电",
-    author: "晚晚服",
+    title: "noon",
+    description: "欢迎来到此服务器，探索无限可能的方块世界！",
+    keywords: "Minecraft,服务器,我的世界,Java版,生存,科技,魔法",
+    author: "abzxc",
     language: "zh-CN"
   },
 
@@ -24,7 +24,7 @@ export const websiteConfig = {
         pageTitle: {
           // 主标题配置（支持打字机效果）
           mainTitle: {
-            texts: ["欢迎来到 晚晚服", "Welcome to DuskCraft"], // 多语言标题数组
+            texts: ["欢迎来到此服务器", "Welcome to Server"], // 多语言标题数组
             typewriter: {
               enabled: true, // 是否启用打字机效果
               speed: 100,    // 打字速度（毫秒）
@@ -61,7 +61,7 @@ export const websiteConfig = {
         name: "历程",
         path: "/history",
         icon: "mdi-history",
-        enabled: true,
+        enabled: false,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
@@ -82,7 +82,7 @@ export const websiteConfig = {
         name: "排行榜",
         path: "/leaderboard",
         icon: "mdi-trophy",
-        enabled: true,
+        enabled: false,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
@@ -143,7 +143,7 @@ export const websiteConfig = {
 
   // 音乐播放器配置
   musicPlayer: {
-    enabled: true,
+    enabled: false,
     metingApi: "https://api.injahow.cn/meting/",
     server: "netease", // netease, kugou
     type: "playlist",   // playlist, song
@@ -207,7 +207,7 @@ export const websiteConfig = {
 
   // 页脚配置
   footer: {
-    copyright: "© 2022-2026 晚晚服保留所有权利.",
+    copyright: "©  ",
     customHtml: `
       <!-- 在这里插入自定义HTML代码，比如备案信息 -->
       <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div>
@@ -329,11 +329,11 @@ export const websiteConfig = {
         title: "服务器信息",
         icon: "information",
         items: [
-          { label: "服务器类别", value: "物理机" },
-          { label: "CPU", value: "i9-13900kf" },
-          { label: "内存", value: "128GB DDR5" },  
-          { label: "类型", value: "生存，生电，建筑" },
-          { label: "最大玩家", value: "100人" },
+          { label: "服务器类别", value: "VPS" },
+          { label: "CPU", value: "R9-9950x" },
+          { label: "网络", value: "BDP三线" },  
+          { label: "类型", value: "科技，魔法，建筑" },
+          { label: "最大玩家", value: "20人" },
           { label: "在线时间", value: "7X24小时" }
         ]
       },
@@ -344,12 +344,7 @@ export const websiteConfig = {
         title: "服务器特色",
         icon: "cog",
         items: [
-          { label: "IPV4网络", value: "✓" },
-          { label: "IPV6网络", value: "✓" },
-          { label: "镜像服务器", value: "✓" },
-          { label: "双重备份", value: "✓" },
-          { label: "群服互通", value: "✓" },
-          { label: "联机工具提供", value: "✓" }
+          { label: "特色就是没有特色", value: "略" }
         ]
       },
       
@@ -359,9 +354,7 @@ export const websiteConfig = {
         title: "管理团队",
         icon: "shield-account",
         items: [
-          { label: "_YUTONG_", value: "腐竹-物理服主！" },
-          { label: "wanwan_jiean", value: "腐竹-技术和主要管理" },
-          { label: "CrazyPastor", value: "腐竹-不务正业" }
+          { label: "Anonymous", value: "略" },
         ]
       }
     },
@@ -397,12 +390,12 @@ export const websiteConfig = {
       description: "加入我们的社区，与我们一起畅游方块世界",
       items: [
         {
-          title: "QQ群",
-          subtitle: "加入官方 QQ 群交流",
+          title: "discord group",
+          subtitle: "加入官方 discord 交流",
           icon: "qqchat",
-          buttonText: "加入 QQ 群",
+          buttonText: "加入 discord ",
           buttonType: "secondary",
-          url: "https://qm.qq.com/q/mVvrLcbLvU"
+          url: "https://discord.gg/2qYkbFsade"
         },
         {
           title: "邮箱",
@@ -410,14 +403,14 @@ export const websiteConfig = {
           icon: "email",
           buttonText: "发送邮件",
           buttonType: "secondary",
-          url: "mailto:me@wanfory.top"
+          url: "email@noon.pw"
         }
       ]
     },
     
     // 成员列表配置
     members: {
-      enabled: true,
+      enabled: false,
       title: "服务器成员",
       description: "我们的服务器大家庭",
       
