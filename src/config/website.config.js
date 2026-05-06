@@ -465,7 +465,7 @@ export const websiteConfig = {
       home: "mdi-home",
       chat: "mdi-chat",
       qqchat: "mdi-qqchat",
-      discord: "mdi-discord",
+      discord: "ic:sharp-discord",
       email: "mdi-email"
     }
   },
