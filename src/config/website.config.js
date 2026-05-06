@@ -201,7 +201,7 @@ export const websiteConfig = {
     // API请求使用的服务器地址（可以不同）
     apiAddress: "mc.noon.pw",
     port: "无需填写此项",
-    version: "1.21.4",
+    version: "1.20.1",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
   },
 
@@ -209,8 +209,7 @@ export const websiteConfig = {
   footer: {
     copyright: "©  Anonymous",
     customHtml: `
-      <!-- 在这里插入自定义HTML代码，比如备案信息 -->
-      <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div>
+      <!-- <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div> -->
     `
   },
 
