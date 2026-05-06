@@ -5,7 +5,7 @@ export const websiteConfig = {
     title: "noon",
     description: "欢迎来到此服务器，探索无限可能的方块世界！",
     keywords: "Minecraft,服务器,我的世界,Java版,生存,科技,魔法",
-    author: "abzxc",
+    author: "Anon",
     language: "zh-CN"
   },
 
