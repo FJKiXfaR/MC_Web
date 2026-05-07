@@ -330,7 +330,7 @@ export const websiteConfig = {
         items: [
           { label: "服务器类别", value: "VPS" },
           { label: "CPU", value: "R9-9950x" },
-          { label: "网络", value: "BDP三线" },  
+          { label: "网络", value: "BGP三线" },  
           { label: "类型", value: "科技，魔法，建筑" },
           { label: "最大玩家", value: "20人" },
           { label: "在线时间", value: "7X24小时" }
