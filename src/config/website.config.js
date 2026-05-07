@@ -394,7 +394,7 @@ export const websiteConfig = {
         {
           title: "discord group",
           subtitle: "加入官方 discord 交流",
-          icon: "discord",
+          icon: "chat",
           buttonText: "加入 discord ",
           buttonType: "secondary",
           url: "https://discord.gg/2qYkbFsade"
