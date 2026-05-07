@@ -343,7 +343,10 @@ export const websiteConfig = {
         title: "服务器特色",
         icon: "cog",
         items: [
-          { label: "特色就是没有特色", value: "略" }
+          { label: "科技进程", value: "格雷为主线，冒险、魔法与科技穿插推进" },
+          { label: "产线与加工", value: "矿处理、化工、自动化与产能" },
+          { label: "材料与合成", value: "长链合成与工业向玩法" },
+          { label: "游玩节奏", value: "长线、协作分工，分阶段目标与社区分工协作" }
         ]
       },
       
