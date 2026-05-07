@@ -200,7 +200,7 @@ export const websiteConfig = {
     displayAddress: "mc.noon.pw",
     // API请求使用的服务器地址（可以不同）
     apiAddress: "mc.noon.pw",
-    port: "无需填写此项",
+    port: "25565",
     version: "1.20.1",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
   },
