@@ -2,7 +2,7 @@
 export const websiteConfig = {
   // 网站基本信息
   site: {
-    title: "noon",
+    title: "NOON",
     description: "欢迎来到此服务器，探索无限可能的方块世界！",
     keywords: "Minecraft,服务器,我的世界,Java版,生存,科技,魔法",
     author: "Anon",
@@ -207,7 +207,7 @@ export const websiteConfig = {
 
   // 页脚配置
   footer: {
-    copyright: "©  Anonymous",
+    copyright: "©  NOON",
     customHtml: `
       <!-- <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div> -->
     `
@@ -356,7 +356,7 @@ export const websiteConfig = {
         title: "管理团队",
         icon: "shield-account",
         items: [
-          { label: "Anonymous", value: "略" },
+          { label: "NOON", value: "略" },
         ]
       }
     },
