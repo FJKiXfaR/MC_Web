@@ -203,6 +203,7 @@ export const websiteConfig = {
     port: "25565",
     version: "1.20.1",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
+    modpackUrl: "https://mcpack.noon.pw/GregTech.Odyssey-0.5.5-beta.zip"
   },
 
   // 页脚配置
@@ -469,7 +470,8 @@ export const websiteConfig = {
       chat: "mdi-chat",
       qqchat: "mdi-qqchat",
       discord: "mdi-discord",
-      email: "mdi-email"
+      email: "mdi-email",
+      download: "mdi-download"
     }
   },
 

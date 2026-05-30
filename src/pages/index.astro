@@ -29,6 +29,10 @@ const description = "欢迎来到我们的Minecraft服务器";
                                 <i class="mdi mdi-content-copy"></i>
                                 <span>复制</span>
                             </button>
+                            <button id="downloadPackBtn" class="copy-btn">
+                                <i class="mdi mdi-download"></i>
+                                <span>获取整合包</span>
+                            </button>
                         </div>
                     </div>
 
@@ -104,13 +108,16 @@ const description = "欢迎来到我们的Minecraft服务器";
     </div>
 </Layout>
 
-<script define:vars={{ apiEndpoint: websiteConfig.server.apiEndpoint, apiAddress: websiteConfig.server.apiAddress, port: websiteConfig.server.port }}>
+<script define:vars={{ apiEndpoint: websiteConfig.server.apiEndpoint, apiAddress: websiteConfig.server.apiAddress, port: websiteConfig.server.port, modpackUrl: websiteConfig.server.modpackUrl, isDev: import.meta.env.DEV }}>
 // 服务器状态API调用
-console.log('脚本开始执行...');
-console.log('配置参数:', {apiEndpoint, apiAddress, port});
+if (isDev) {
+    console.log('脚本开始执行...');
+    console.log('配置参数:', {apiEndpoint, apiAddress, port});
+}
 
 document.addEventListener('DOMContentLoaded', async function() {
-    console.log('DOM已加载，开始初始化...');
+    if (isDev)
+        console.log('DOM已加载，开始初始化...');
     
     // 获取所有DOM元素
     const onlinePlayersEl = document.getElementById('onlinePlayers');
@@ -124,8 +131,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     const playersDisplay = document.getElementById('playersDisplay');
     const motdDisplay = document.getElementById('motdDisplay');
     const playersList = document.getElementById('playersList');
-    
-    console.log('DOM元素:', {onlinePlayersEl, copyAddressBtn, serverAddress, refreshStatusBtn});
+
+    if (isDev)
+        console.log('DOM元素:', {onlinePlayersEl, copyAddressBtn, serverAddress, refreshStatusBtn});
     
     if (!onlinePlayersEl) {
         console.error('找不到onlinePlayers元素');
@@ -150,6 +158,49 @@ document.addEventListener('DOMContentLoaded', async function() {
                 
             } catch (err) {
                 console.error('复制失败:', err);
+            }
+        });
+    }
+
+    // 获取整合包功能
+    const downloadPackBtn = document.getElementById('downloadPackBtn');
+    if (downloadPackBtn) {
+        downloadPackBtn.addEventListener('click', function() {
+            const packUrl = modpackUrl || '#';
+
+            if (packUrl && packUrl !== '#') {
+                // 保存原始状态
+                const originalText = downloadPackBtn.querySelector('span').textContent;
+
+                // 显示"正在下载"并禁用按钮
+                downloadPackBtn.querySelector('span').textContent = '正在下载';
+                downloadPackBtn.disabled = true;
+                downloadPackBtn.style.cursor = 'not-allowed';
+                downloadPackBtn.classList.add('copied');
+
+                // 触发下载
+                window.location.href = packUrl;
+
+                // 5秒后恢复按钮状态
+                setTimeout(() => {
+                    downloadPackBtn.querySelector('span').textContent = originalText;
+                    downloadPackBtn.disabled = false;
+                    downloadPackBtn.style.cursor = 'pointer';
+                    downloadPackBtn.classList.remove('copied');
+                }, 5000);
+            } else {
+                // 如果没有配置下载链接，显示提示
+                const originalText = downloadPackBtn.querySelector('span').textContent;
+                const originalBg = downloadPackBtn.style.backgroundColor;
+                downloadPackBtn.querySelector('span').textContent = '未配置下载链接';
+                downloadPackBtn.classList.add('copied');
+                downloadPackBtn.style.backgroundColor = '#ff0000';
+
+                setTimeout(() => {
+                    downloadPackBtn.querySelector('span').textContent = originalText;
+                    downloadPackBtn.classList.remove('copied');
+                    downloadPackBtn.style.backgroundColor = originalBg;
+                }, 2000);
             }
         });
     }
@@ -262,27 +313,34 @@ document.addEventListener('DOMContentLoaded', async function() {
         
         try {
             const apiUrl = `${apiEndpoint}/${apiAddress}:${port}`;
-            console.log('API请求URL:', apiUrl);
+
+            if (isDev)
+                console.log('API请求URL:', apiUrl);
             
             const response = await fetch(apiUrl, {
                 headers: { 'Accept': 'application/json' }
             });
-            
-            console.log('API响应状态:', response.status, response.statusText);
+
+            if (isDev)
+                console.log('API响应状态:', response.status, response.statusText);
             
             if (!response.ok) {
                 throw new Error(`API响应异常: ${response.status} ${response.statusText}`);
             }
             
             const data = await response.json();
-            console.log('API响应数据:', data);
+
+            if (isDev)
+                console.log('API响应数据:', data);
             
             // 更新在线玩家显示（顶部卡片）
             if (data.online) {
                 const onlinePlayers = data.players?.online || 0;
                 const maxPlayers = data.players?.max || '?';
                 onlinePlayersEl.textContent = `${onlinePlayers}/${maxPlayers}`;
-                console.log('在线玩家已更新:', onlinePlayersEl.textContent);
+
+                if (isDev)
+                    console.log('在线玩家已更新:', onlinePlayersEl.textContent);
             } else {
                 onlinePlayersEl.textContent = '离线';
             }
@@ -298,12 +356,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     
     // 初始获取状态
-    console.log('开始获取服务器状态...');
+    if (isDev)
+        console.log('开始获取服务器状态...');
     await fetchServerStatus();
     
-    // 每30秒更新一次状态
-    setInterval(fetchServerStatus, 30000);
-    console.log('定时器已设置，每30秒更新一次');
+    // 每5分钟更新一次状态
+    setInterval(fetchServerStatus, 300000);
+    if (isDev)
+        console.log('定时器已设置，每5分钟更新一次');
 });
 </script>
 
