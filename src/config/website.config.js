@@ -201,7 +201,7 @@ export const websiteConfig = {
     // API请求使用的服务器地址（可以不同）
     apiAddress: "mc.noon.pw",
     port: "25565",
-    version: "1.20.1",
+    version: "1.6.4",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
     //modpackUrl: "https://mcpack.noon.pw/GregTech.Odyssey-0.5.5-beta.zip"
     modpackUrl: "https://mcpack.noon.pw/mite-1.6.4-R169.zip"
