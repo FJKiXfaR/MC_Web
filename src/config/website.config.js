@@ -203,7 +203,8 @@ export const websiteConfig = {
     port: "25565",
     version: "1.20.1",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
-    modpackUrl: "https://mcpack.noon.pw/GregTech.Odyssey-0.5.5-beta.zip"
+    //modpackUrl: "https://mcpack.noon.pw/GregTech.Odyssey-0.5.5-beta.zip"
+    modpackUrl: "https://mcpack.noon.pw/mite-1.6.4-R169.zip"
   },
 
   // 页脚配置
@@ -344,10 +345,12 @@ export const websiteConfig = {
         title: "服务器特色",
         icon: "cog",
         items: [
-          { label: "科技进程", value: "格雷为主线，冒险、魔法与科技穿插推进" },
-          { label: "产线与加工", value: "矿处理、化工、自动化与产能" },
-          { label: "材料与合成", value: "长链合成与工业向玩法" },
-          { label: "游玩节奏", value: "长线、协作分工，分阶段目标与社区分工协作" }
+          [
+            { label: "生存威胁", value: "怪物大幅强化，夜晚与洞穴危机四伏，流血机制与骨折让战斗更具风险" },
+            { label: "资源管理", value: "矿物稀有，工具耐久低下，每一份资源都需要精打细算" },
+            { label: "合成体系", value: "原版合成表大量移除，必须通过工作台与手工配方逐步解锁更高阶工具" },
+            { label: "游玩节奏", value: "慢节奏高惩罚，死亡损失惨重，长期规划与谨慎探索是生存关键" }
+          ]
         ]
       },
       
